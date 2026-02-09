@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.Insets?>
+
+<VBox spacing="10" xmlns="http://javafx.com/javafx"
+      xmlns:fx="http://javafx.com/fxml"
+      fx:controller="com.example.StudentController">
+
+    <TextField fx:id="nameField" promptText="Name"/>
+    <TextField fx:id="emailField" promptText="Email"/>
+    <Button text="Add" onAction="#addStudent"/>
+
+    <TableView fx:id="table">
+        <columns>
+            <TableColumn text="ID" fx:id="idCol"/>
+            <TableColumn text="Name" fx:id="nameCol"/>
+            <TableColumn text="Email" fx:id="emailCol"/>
+        </columns>
+    </TableView>
+
+    <Button text="Delete Selected" onAction="#deleteStudent"/>
+</VBox>
+
